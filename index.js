@@ -27,14 +27,11 @@ function showResult(output, showResults) {
 
 function firstCheck(number, showResults) {
     if(isNaN(number) == true) {
-        console.log("Please enter a 5-digit number");
         showResults.push("Please enter a 5-digit number!");
     }
     else if(number.toString().length == 5) {
-        console.log("The number passes the first check");
         showResults.push("The number passes the first check!");
     } else {
-        console.log("The number is less than or greater than 5 digits");
         showResults.push("The number is less than or greater than 5 digits!");
     }
 }
@@ -44,10 +41,8 @@ function secondCheck(number, showResults) {
     let fourthNumber = parseInt(number.substring(3,4));
     let secondNumber = parseInt(number.substring(1,2));
     if((fourthNumber-4)==secondNumber){
-        console.log("The second check passed!")
         showResults.push("The second check passed!");
     } else {
-        console.log("The 4th digit is not 4 more than the 2nd one");
         showResults.push("The 4th digit is not 4 more than the 2nd one!");
     }
 }
@@ -57,10 +52,8 @@ function thirdCheck(number, showResults) {
     let thirdNumber = parseInt(number.substring(2,3));
     let secondNumber = parseInt(number.substring(1,2));
     if((thirdNumber+3)==secondNumber){
-        console.log("The third check passed!");
         showResults.push("The third check passed!");
     } else {
-        console.log("The 3rd digit is not 3 less than the 2nd one!")
         showResults.push("The 3rd digit is not 3 less than the 2nd one!");
     }
 }
@@ -70,10 +63,8 @@ function fourthCheck(number, showResults) {
     let firstNumber = parseInt(number.substring(1,0));
     let fifthNumber = parseInt(number.substring(5,4));
     if((firstNumber/3)==fifthNumber) {
-        console.log("The fourth check passed!")
         showResults.push("The fourth check passed!");
     } else {
-        console.log("The 1st digit is not three times the 5th digit")
         showResults.push("The 1st digit is not three times the 5th digit!");
     }
 }
@@ -91,7 +82,6 @@ function fifthCheck(number, showResults) {
                 count++;            
                 if(count==3)
                 {
-                    console.log("The number has passed the fifth check");
                     showResults.push("The number has passed the fifth check!");
                     return;
                 }
@@ -99,7 +89,6 @@ function fifthCheck(number, showResults) {
         }
     }
     if(count != 3) {
-        console.log("Three pairs of digits never sum up to 11")
         showResults.push("Three pairs of digits never sum up to 11!");
     }
 }
